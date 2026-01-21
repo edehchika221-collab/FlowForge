@@ -9,6 +9,8 @@ const webhookEndpoints = new Map<string, { workflowId: string; secret: string }>
 // Receive webhook
 router.all('/:endpointId', async (req: Request, res: Response) => {
   const { endpointId } = req.params
+  const endpoint = webhookEndpoints.get(endpointId)
+  
   try {
     if (!endpoint) {
       // For demo purposes, accept any webhook

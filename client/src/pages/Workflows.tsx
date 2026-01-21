@@ -16,7 +16,6 @@ import {
   XCircle,
   Zap,
   Bot,
-  Mail,
   Filter,
 } from 'lucide-react'
 import { useState } from 'react'
